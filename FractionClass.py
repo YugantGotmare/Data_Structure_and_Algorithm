@@ -34,14 +34,19 @@ class Fraction:
 
         return "{}/{}".format(temp_num,temp_den)
 
-    
 
-y = Fraction(2,5)
+n = int(input("Enter the Neumerator: "))
+d = int(input("Enter the Denomenator: "))
+n2 = int(input("Enter the Neumerator: "))
+d2 = int(input("Enter the Denomenator: "))
+
+
+y = Fraction(n,d)
 print(y)
-z = Fraction(4, 6)
+z = Fraction(n2,d2)
 print(z)
 print("Addition: ",y+z)
 print("Subtraction: ",y-z)
 print("Multiplication: ",y*z)
-print("Division: ",y/z)
+print("Division: ",y/z) 
 print(y)
