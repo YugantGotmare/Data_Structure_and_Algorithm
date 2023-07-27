@@ -1,0 +1,27 @@
+# There are two type of Sorting Algorithm
+
+    1) Comparison Based
+        eg Selection Sort
+        Bubble sort, Insertion sort
+        MergeSort, Quicksort,  <--- Divide and conqure application
+        Heap sort
+    2) Non-Comparison based
+        eg Count sort, radix sort
+           Bucket sort
+
+
+
+Stable vs unstable sorting Algorithm
+Stable --> relative order should be maintained after sorting Algorithm
+unstable --> Quicksort, Selection sort, Heap sort
+eg:
+    [4a,5,7,3,4b,6,10]
+    stable --> [3,a,4b,5,6,7,10]
+    unstable --> [3,4b,4a,5,6,7,10]
+
+
+
+Inplace & Outplace Sorting Algorithm
+Inplace --> Not using  any extra space to sort an array 
+Outplace --> using  any extra space to sort an array 
+            eg: MergeSort ( Most optimize sorting Algorithm)
