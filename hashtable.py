@@ -1,26 +1,25 @@
 class HashTable:
     def __init__(self):
         self.MAX = 100
-        self.arr = [None for i in range(self.MAX)]
+        self.arr = [None for i in range(100)]
 
     def get_hash(self, key):
-        hash = 0
+        h = 0
         for char in key:
-            hash += ord(char)
-        return hash % self.MAX
-
-    def __setitem__(self, key, value):
-        H = self.get_hash(key)
-        self.arr[H] = value
+            h += ord(char)
+        return h % self.MAX
+    
+    def __setitem__(self, key, val):
+        h = self.get_hash(key)
+        self.arr[h] = val
 
     def __getitem__(self, key):
-        H = self.get_hash(key)
-        return self.arr[H]
+        h = self.get_hash(key)
+        return self.arr[h]
 
     def __delitem__(self, key):
-        H = self.get_hash(key)
-        self.arr[H] = None
-
+        h = self.get_hash(key)
+        self.arr[h] = None
 
 H = HashTable()
 H["Rahul"] = 1
@@ -28,8 +27,9 @@ H["Bahul"] = 10
 H["Sahul"] = 19
 H["Zahul"] = 18
 H["Yahul"] = 17
+H["Gahul"] = 20
 
-print(H["Sahul"])
-del H["Bahul"]
+print(H["Gahul"])
+# del H["Bahul"]
 print(H.arr)
 
